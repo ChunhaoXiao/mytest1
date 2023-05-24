@@ -9,21 +9,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
 @RestController
-
-public class ProductController {
-    @Autowired
-    private ProductRepo productRepo;
-    @PostMapping("/product")
-    public Product store(@RequestBody Product product) {
-        return productRepo.save(product);
-    }
-
-    @GetMapping("/product")
-    public List<Product> index() {
-
-        //index page
-        return productRepo.index();
+public class TestGitController {
+    @GetMapping("/git")
+    public String index() {
+        return "sucesss~~";
     }
 }
